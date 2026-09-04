@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Create Account | PrimeCare Medical Centre</title>
+<meta name="description" content="Register for a PrimeCare patient account to book appointments and manage your healthcare online.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo-icon.png" alt="PrimeCare Medical Centre" class="logo-icon-img">
+            PrimeCare Medical Centre
+        </a>
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#doctors">Doctors</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-secondary">Patient login</a>
+            <a href="register.html" class="btn btn-primary">Create account</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ REGISTER FORM ============ -->
+<section class="auth-page">
+    <div class="card auth-card">
+        <div class="auth-head">
+            <img src="assets/images/logo-full.png" alt="PrimeCare Medical Centre" class="auth-logo-img">
+            <h1>Create your patient account</h1>
+            <p>Register to book appointments and manage your care online.</p>
+        </div>
+
+        <p class="form-banner" id="formBanner"></p>
+
+        <form id="registerForm" novalidate>
+
+            <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" placeholder="e.g. Naledi Dube" autocomplete="name">
+                <p class="field-error" id="err-fullName">Please enter your full name (first and last).</p>
+            </div>
+
+            <div class="form-row-2">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" autocomplete="email">
+                    <p class="field-error" id="err-email">Please enter a valid email address.</p>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="082 123 4567" autocomplete="tel">
+                    <p class="field-error" id="err-phone">Please enter a valid phone number.</p>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of birth</label>
+                <input type="date" id="dob" name="dob" autocomplete="bday">
+                <p class="field-error" id="err-dob">Please enter a valid date of birth.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="password-input-wrap">
+                    <input type="password" id="password" name="password" placeholder="Create a password" autocomplete="new-password">
+                    <button type="button" class="password-toggle" id="togglePassword" aria-label="Show password">
+                        <svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+                <div class="pw-strength" id="pwStrength">
+                    <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                </div>
+                <p class="pw-strength-label" id="pwStrengthLabel">Use 8+ characters, with a number and a letter.</p>
+                <p class="field-error" id="err-password">Password does not meet the requirements.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm password</label>
+                <div class="password-input-wrap">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter your password" autocomplete="new-password">
+                    <button type="button" class="password-toggle" id="toggleConfirmPassword" aria-label="Show password">
+                        <svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+                <p class="field-error" id="err-confirmPassword">Passwords do not match.</p>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="registerBtn">Create account</button>
+
+            <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+        </form>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <span>&copy; 2026 PrimeCare Medical Centre. All rights reserved.</span>
+            <span>Johannesburg, Gauteng, South Africa</span>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>

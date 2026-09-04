@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Login | PrimeCare Medical Centre</title>
+<meta name="description" content="Log in to your PrimeCare patient account to manage appointments, records, and prescriptions.">
+<link rel="icon" type="image/png" href="assets/images/favicon.png">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+    <div class="header-inner">
+        <a href="index.html" class="logo">
+            <img src="assets/images/logo-icon.png" alt="PrimeCare Medical Centre" class="logo-icon-img">
+            PrimeCare Medical Centre
+        </a>
+        <nav class="main-nav" id="mainNav">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#doctors">Doctors</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+            <a href="login.html" class="btn btn-secondary">Patient login</a>
+            <a href="register.html" class="btn btn-primary">Create account</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+                <svg class="icon" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ LOGIN FORM ============ -->
+<section class="auth-page">
+    <div class="card auth-card">
+        <div class="auth-head">
+            <img src="assets/images/logo-full.png" alt="PrimeCare Medical Centre" class="auth-logo-img">
+            <h1>Welcome back</h1>
+            <p>Log in to manage your appointments and health records.</p>
+        </div>
+
+        <p class="form-banner" id="formBanner"></p>
+
+        <form id="loginForm" novalidate>
+
+            <div class="form-group">
+                <label for="loginEmail">Email address</label>
+                <input type="email" id="loginEmail" name="loginEmail" placeholder="you@example.com" autocomplete="email">
+                <p class="field-error" id="err-loginEmail">Please enter a valid email address.</p>
+            </div>
+
+            <div class="form-group">
+                <label for="loginPassword">Password</label>
+                <div class="password-input-wrap">
+                    <input type="password" id="loginPassword" name="loginPassword" placeholder="Enter your password" autocomplete="current-password">
+                    <button type="button" class="password-toggle" id="toggleLoginPassword" aria-label="Show password">
+                        <svg class="icon" style="width:18px;height:18px;" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                    </button>
+                </div>
+                <p class="field-error" id="err-loginPassword">Please enter your password.</p>
+            </div>
+
+            <div class="form-row-between">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                    Remember me
+                </label>
+                <a href="forgot-password.html">Forgot password?</a>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block" id="loginBtn">Log in</button>
+
+            <p class="auth-switch">Don't have an account? <a href="register.html">Create one</a></p>
+        </form>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <span>&copy; 2026 PrimeCare Medical Centre. All rights reserved.</span>
+            <span>Johannesburg, Gauteng, South Africa</span>
+        </div>
+    </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
