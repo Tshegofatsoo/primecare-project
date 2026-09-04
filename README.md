@@ -93,43 +93,4 @@ Start Apache and MySQL through WAMP Server.
 Open the project through the local WAMP address in a web browser.
 The local database configuration file is excluded from the GitHub repository using .gitignore because it contains local database connection settings.
 
-primecare-website/
-│
-├── api/
-│   ├── appointments/
-│   ├── auth/
-│   ├── config/
-│   ├── departments/
-│   ├── notifications/
-│   ├── prescriptions/
-│   ├── profile/
-│   └── records/
-│
-├── assets/
-│   ├── css/
-│   ├── images/
-│   └── js/
-│
-├── database/
-│   └── schema.sql
-│
-├── includes/
-│   ├── auth-check.php
-│   ├── dash-header.php
-│   ├── rate-limit.php
-│   └── require-patient-login.php
-│
-├── appointments.php
-├── book-appointment.php
-├── contact.html
-├── forgot-password.html
-├── index.html
-├── login.html
-├── medical-records.php
-├── patient-dashboard.php
-├── prescriptions.php
-├── profile.php
-├── register.html
-├── reset-password.html
-├── services.html
-└── .gitignore
+
