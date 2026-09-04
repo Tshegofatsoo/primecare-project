@@ -93,7 +93,6 @@ Start Apache and MySQL through WAMP Server.
 Open the project through the local WAMP address in a web browser.
 The local database configuration file is excluded from the GitHub repository using .gitignore because it contains local database connection settings.
 
-Project Folder Structure
 primecare-website/
 │
 ├── api/
