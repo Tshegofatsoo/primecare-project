@@ -27,6 +27,7 @@ try {
                   AND pr.status = 'Requested'
             ) AS has_pending_request
          FROM prescriptions p
+         JOIN medical_records mr ON mr.record_id = p.record_id AND mr.is_draft = 0
          LEFT JOIN doctors d ON p.doctor_id = d.doctor_id
          WHERE p.patient_id = :patient_id
          ORDER BY p.date_issued DESC"

@@ -30,6 +30,7 @@ try {
          LEFT JOIN doctors d ON r.doctor_id = d.doctor_id
          LEFT JOIN prescriptions p ON p.record_id = r.record_id
          WHERE r.patient_id = :patient_id
+           AND r.is_draft = 0
          GROUP BY r.record_id
          ORDER BY r.consultation_date DESC"
     );
