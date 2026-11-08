@@ -17,6 +17,7 @@ import java.time.format.DateTimeParseException
 object FormatUtils {
 
     private val displayDate = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+    private val prettyDate = DateTimeFormatter.ofPattern("EEE, d MMM")
 
     /** MySQL TIME "09:30:00" (or "09:30") -> "9:30 AM" */
     fun formatTime(rawTime: String): String {
@@ -45,6 +46,13 @@ object FormatUtils {
     /** "2026-03-05" -> "05/03/2026"; returns the input unchanged if it can't be parsed. */
     fun isoToDisplay(iso: String): String = try {
         LocalDate.parse(iso).format(displayDate)
+    } catch (e: DateTimeParseException) {
+        iso
+    }
+
+    /** "2026-11-09" -> "Mon, 9 Nov"; returns the input unchanged if it can't be parsed. */
+    fun isoToPretty(iso: String): String = try {
+        LocalDate.parse(iso).format(prettyDate)
     } catch (e: DateTimeParseException) {
         iso
     }
