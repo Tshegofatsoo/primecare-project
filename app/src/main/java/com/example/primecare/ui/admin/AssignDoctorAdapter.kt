@@ -32,7 +32,7 @@ class AssignDoctorAdapter(
         val item = getItem(position)
         val b = holder.binding
         b.patientNameText.text = item.patientFullName
-        b.timeReasonText.text = "${FormatUtils.formatTime(item.appointment_time)} · ${item.reason}"
+        b.timeReasonText.text = "${FormatUtils.isoToDisplay(item.appointment_date)} · ${FormatUtils.formatTime(item.appointment_time)} · ${item.reason}"
 
         val names = doctors.map { d ->
             if (d.specialty.isNullOrBlank()) d.fullName else "${d.fullName} (${d.specialty})"
